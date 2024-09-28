@@ -13,6 +13,7 @@ pipeline {
 
             steps {
                 sh '''
+                    echo "start pipe"
                     npm run build
                     ls -la
                 '''
