@@ -8,14 +8,23 @@ pipeline {
                     image 'node:18-alpine'
                     reuseNode true
                 }
-                
             }
 
             steps {
+                // Print Node and npm versions for debugging
                 sh '''
-                    npm run build
-                    ls -la
+                    node -v
+                    npm -v
                 '''
+                
+                // Install dependencies
+                sh 'npm install'
+
+                // Build the project
+                sh 'npm run build'
+
+                // List the files to confirm the build was successful
+                sh 'ls -la'
             }
         }
     }
