@@ -11,11 +11,11 @@ pipeline {
             }
 
             steps {
-                // Print Node and npm versions for debugging
-                 
-                
-                // Install dependencies
-                sh 'npm install'
+                // Clean up the workspace before running npm install
+                sh 'rm -rf node_modules'
+
+                // Install dependencies with --unsafe-perm flag
+                sh 'npm install --unsafe-perm'
 
                 // Build the project
                 sh 'npm run build'
