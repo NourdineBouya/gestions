@@ -14,6 +14,7 @@ import React from 'react'
 const Entree = () => {
   return (
     <div>
+      <h1 className="text-xl fon">Mes Sorties</h1>
         <Table>
   <TableCaption>A list of your recent invoices.</TableCaption>
   <TableHeader>
