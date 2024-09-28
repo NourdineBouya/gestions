@@ -12,10 +12,7 @@ pipeline {
 
             steps {
                 // Print Node and npm versions for debugging
-                sh '''
-                    node -v
-                    npm -v
-                '''
+                 
                 
                 // Install dependencies
                 sh 'npm install'
