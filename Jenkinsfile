@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh '''
                 npm ci
-                sudo chown -R 110:114 "/.npm"
+                chown -R $(id -u):$(id -g) "/.npm"
                 npm run build
                 '''
             }
