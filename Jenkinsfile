@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_HUB_CREDENTIALS = credentials('nourdinebouya')
+        DOCKER_HUB_CREDENTIALS = credentials('Docker-hub')
         DOCKER_IMAGE = 'nourdinebouya/gestion:v1'
     }
 
